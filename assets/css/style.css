@@ -1,0 +1,71 @@
+:root {
+  --c-white: #fff;
+  --c-black: #000;
+  --c-gold: #bb945f;
+  --c-gray: gray;
+  --f-inter: "inter", sans-serif;
+  --f-forum: "forum", sans-serif;
+}
+
+@font-face {
+  src: url("~@/fonts/ForumRegular.woff");
+
+  font-style: normal;
+  font-weight: 400;
+  font-family: "forum";
+}
+
+@font-face {
+  src: url("~@/fonts/InterRegular.woff");
+
+  font-style: normal;
+  font-weight: 400;
+  font-family: "inter";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  scrollbar-gutter: stable;
+  position: relative;
+  padding: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(73, 73, 73, 0.3);
+  opacity: 0;
+  transition: z-index 0.001s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--c-black);
+  opacity: 1;
+  transition: all;
+  transition-duration: 0.35s;
+  width: 16px;
+  height: 16px;
+}
+
+.swiper-pagination-bullet:hover {
+  background-color: var(--c-gold);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--c-gold);
+}
